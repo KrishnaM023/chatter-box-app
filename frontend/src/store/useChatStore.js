@@ -42,6 +42,7 @@ export const useChatStore = create((set, get) => ({
         messageData
       );
       set({ messages: [...messages, res.data] });
+
     } catch (error) {
       toast.error(error.response.data.message);
     }
